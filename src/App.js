@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./js/views/Home";
+import { Header } from "./js/components/Header";
 
 import injectContext from "./js/store/appContext";
 
@@ -10,7 +11,7 @@ export class App extends React.Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route render={() => <h1>Not found!</h1>} />
+          <Route render={() => <div><Header /> <h1>Not found!</h1></div>} />
         </Switch>
       </BrowserRouter>
     );
