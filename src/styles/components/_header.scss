@@ -1,5 +1,6 @@
 .navbar {
-    background-color: $color-primary;
+    background-color: $color-blue;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -9,4 +10,7 @@
 
 .nav-item {
     font-size: 1.5rem;
+    &.activex1 a {
+        color: $color-red !important;
+    }
 }

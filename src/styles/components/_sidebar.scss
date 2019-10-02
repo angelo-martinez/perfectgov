@@ -1,0 +1,30 @@
+.sidebar {
+  height: 60vh; /* 60% Full-height */
+  width: 25vw; /* 0 width - change this with JavaScript */
+  max-width: 35rem;
+  border-radius: 0 50rem 50rem 0;
+  position: fixed; /* Stay in place */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: $color-blue-light; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 6rem; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  &-item {
+    padding: .8rem .8rem .8rem 3.2rem;
+    font-size: 2rem;
+    color: $color-white;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $color-red;
+    } 
+  }
+
+  &.closed {
+    margin-left: -25vw;
+  }
+}

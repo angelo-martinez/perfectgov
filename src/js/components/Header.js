@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Consumer } from "../store/appContext";
 
 export const Header = () => {
 
@@ -7,7 +8,6 @@ const [ queryString, seQueryString ] = useState('/');
 
   useEffect(() => {
     seQueryString(window.location.pathname);
-    console.log(queryString);
   });
 
   return (
@@ -40,6 +40,15 @@ const [ queryString, seQueryString ] = useState('/');
                 Rules
               </Link>
             </li>
+            <Consumer>
+            {({ store, actions }) => {
+              return (
+                <li className={`nav-item ${store.opernSidebar ? 'activex1' : ''}`} onClick={() => actions.setSidebar()}>
+                  <a href="#" className="nav-link">Account</a>
+                </li>
+              )
+            }}
+            </Consumer>
           </ul>
         </div>
       </nav>
