@@ -1,5 +1,5 @@
 import React from "react";
-import { Feed } from "../components/Feed";
+import { Feed } from "../components/FeedComponents/Feed";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 
